@@ -1,4 +1,11 @@
 body
 {
     background:deeppink;
+
+}
+ul, li
+{
+    display: inline;
+    color: white;
+    background:black;
 }
