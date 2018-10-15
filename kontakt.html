@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<ul>
+
+    <li><a href="index.html">Strona Główna</a></li>
+    <li><a href="kontakt.html">kontakt</a></li>
+
+    <li> Czat </li>
+</ul>
+
+<form>
+    <fieldset>
+
+        <legend>Uzupelnij dane:</legend>
+            <br/>
+            <label for="name">Imie:</label>
+             <br/>
+            <input id="name" name="name" placeholder="Podaj imię" required/>
+            <br/>
+            <label for="surname">Nazwisko:</label>
+             <br/>
+            <input id="surname" surname="surname" placeholder="Podaj nazwisko" required/>
+            <br/>
+            <label for="email">E-mail:</label>
+             <br/>
+            <input id="email" type="email" name="email" placeholder="Podaj email" required/>
+            <br/>
+            <label>Płeć</label>
+            <br/>
+            <input type="radio"
+                   name="sex"
+                   id="man"
+                   value="man"
+                   checked required/>
+        <label for="man">Mężczyzna</label>
+        <input type="radio"
+               name="sex"
+               id="woman"
+               value="woman" required/>
+        <label for="woman">Kobieta</label>
+        <br/>
+        <label for="description">Opis</label>
+        <br/>
+        <textarea id="description" name="description" cols="20" rows="3" required/></textarea>
+        <br/>
+        <label for="age">Wiek</label>
+        <br/>
+        <input type="number" name="age" id="age" min="18"/>
+        <br/>
+        <label for="maritial">Stan cywilny</label>
+        <br/>
+        <select id="maritial" name="maritial" required>
+            <option>Panna/Kawaler</option>
+            <option>Mężatka/Żonaty</option>
+            <option>Wdowa/Wdowiec</option>
+            <select/>
+            <br/>
+
+    </fieldset>
+
+</form>
+
+
+
+
+</body>
+</html>
