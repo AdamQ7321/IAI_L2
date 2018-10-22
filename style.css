@@ -20,3 +20,8 @@ a:hover{
     background-color: gold;
 
 }
+
+iframe{
+
+    width: 100%;
+}
