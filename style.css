@@ -9,3 +9,14 @@ ul, li
     color: white;
     background:black;
 }
+b{
+    backround-color: green;
+    transition: all 0.5s;
+    padding: 10px;
+
+
+}
+a:hover{
+    background-color: gold;
+
+}
