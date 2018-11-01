@@ -10,7 +10,7 @@ ul, li
     background:black;
 }
 b{
-    backround-color: green;
+    background-color: green;
     transition: all 0.5s;
     padding: 10px;
 
@@ -24,4 +24,37 @@ a:hover{
 iframe{
 
     width: 100%;
+}
+
+.is-invalid{
+    border: solid 2px red;
+
+}
+input{
+    width: 220px;
+}
+
+.myButton {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 45px;
+    z-index: 99;
+    font-size: 14px;
+    border: solid;
+    outline: none;
+    background-color: darkred;
+    color: white;
+    cursor: pointer;
+    padding: 14px;
+    border-radius: 4px;
+}
+
+.myButton:hover {
+    background-color: #555;
+}
+
+.przewin{
+    background-color: deeppink;
+    padding: 1px 1px 2200px;
 }

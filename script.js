@@ -1,26 +1,63 @@
 
 
-let send=document.querySelector('.send');
-let clear=document.querySelector('.clear');
+//kontakt
+let send = document.querySelector(".send");
 
-send.addEventListener('click',function(){
-    console.log('test');
-    let name=document.getElementById('.name');
-    if(typeof name ==='number') {
-        document.querySelector('.info').innerHTML="Imie nie moze byc liczba";
+send.addEventListener("click", checkForm);
+
+
+function addClass(element, className) {
+    element.classList.add(className);
+}
+
+function removeClass(element, className) {
+    element.classList.remove(className);
+}
+
+
+function checkForm() {
+
+    let wiek = document.querySelector("#age");
+    let imie = document.querySelector("#name");
+    let nazwisko = document.querySelector('#surname');
+    let email = document.querySelector('#email');
+    let opis = document.querySelector('#description');
+
+    const mailReg = new RegExp('^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$', 'gi');
+
+    let numberValue = wiek.value;
+    let textValue = imie.value;
+    let nazwiskoV = nazwisko.value;
+    let emailV = email.value;
+    let opisV = opis.value;
+
+    if (numberValue === '' || !parseInt(numberValue) || isNaN(numberValue) || numberValue < 1 || numberValue > 100) {
+        addClass(wiek, 'is-invalid');
+    } else {
+        removeClass(wiek, 'is-invalid');
     }
-    else{
-        document.querySelector('.info').innerHTML="prawidlowo wprowadzone dane";
 
+    if (textValue === '' || parseInt(textValue)) {
+        addClass(imie, 'is-invalid');
+    } else {
+        removeClass(imie, 'is-invalid');
     }
-});
 
+    if (nazwiskoV === '' || parseInt(nazwiskoV)) {
+        addClass(nazwisko, 'is-invalid');
+    } else {
+        removeClass(nazwisko, 'is-invalid');
+    }
 
+    if (opisV === '') {
+        addClass(nazwisko, 'is-invalid');
+    } else {
+        removeClass(nazwisko, 'is-invalid');
+    }
 
-
-clear.addEventListener('click',function(){
-
-
-   console.log('Przycisk został naciśnięty');
-
-});
+    if (emailV === '' || !mailReg.test(emailV)) {
+        addClass(nazwisko, 'is-invalid');
+    } else {
+        removeClass(nazwisko, 'is-invalid');
+    }
+}
